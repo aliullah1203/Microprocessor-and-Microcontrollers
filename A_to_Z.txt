@@ -1,0 +1,14 @@
+org 100h
+
+mov bl,'A'
+
+p2:
+    mov ah,2
+    mov dl,bl
+    int 21h
+
+    add bl,1
+
+    cmp bl,'Z'+1
+    jne p2
+done:
